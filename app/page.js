@@ -10,6 +10,7 @@ import Navigation from "@/components/Navigation";
 import Distributor from "@/components/Distributor";
 import Contact from "@/components/Contact";
 import Gallery from "@/components/Gallery";
+import Advantages from "@/components/Advantages";
 
 export default function Page() {
   return (
@@ -21,6 +22,7 @@ export default function Page() {
       <Gallery />
 
       <Services />
+      <Advantages/>
       <Stats />
       {/* <Contact/> */}
       {/* <SportsProjects />

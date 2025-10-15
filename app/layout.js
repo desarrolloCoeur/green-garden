@@ -15,7 +15,7 @@ export const metadata = {
   title: "Green Garden",
   description: "",
   icons: {
-    icon: "/logo.png",
+    icon: "/isotipo.png",
     shortcut: "/logo.png",
     apple: "/logo.png",
   },  

@@ -28,9 +28,9 @@ export default function Navigation() {
             <Image
               src="/assets/logo.png"
               alt="Green Garden"
-              width={180}
-              height={60}
-              className="h-12 w-auto"
+              width={380}
+              height={160}
+              className="h-16 w-auto"
             />
           </a>
 
