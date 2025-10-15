@@ -97,21 +97,21 @@ export default function Navigation() {
         >
           <div className="space-y-2">
             <a
-              href="#servicios"
-              onClick={() => setMobileMenuOpen(false)}
-              className="block px-4 py-2 text-gray-700 hover:text-[#4CAF50] hover:bg-gray-50 transition-all duration-200 font-medium rounded-sm hover:translate-x-1"
-              style={{ animationDelay: "50ms" }}
-            >
-              Servicios
-            </a>
-
-            <a
               href="#about"
               onClick={() => setMobileMenuOpen(false)}
               className="block px-4 py-2 text-gray-700 hover:text-[#4CAF50] hover:bg-gray-50 transition-all duration-200 font-medium rounded-sm hover:translate-x-1"
               style={{ animationDelay: "100ms" }}
             >
               Nosotros
+            </a>
+
+            <a
+              href="#servicios"
+              onClick={() => setMobileMenuOpen(false)}
+              className="block px-4 py-2 text-gray-700 hover:text-[#4CAF50] hover:bg-gray-50 transition-all duration-200 font-medium rounded-sm hover:translate-x-1"
+              style={{ animationDelay: "50ms" }}
+            >
+              Servicios
             </a>
 
             <a
