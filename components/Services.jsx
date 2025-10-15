@@ -26,7 +26,7 @@ export default function Services() {
 
   return (
     <div id="servicios" className="w-full bg-[#f8f6f3] py-24">
-      <div className="w-[95%] mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="mb-20">
           <p className="text-sm text-[#4c9d2a] tracking-wider uppercase mb-4">Nuestros Servicios</p>

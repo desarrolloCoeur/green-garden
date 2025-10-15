@@ -1,104 +1,74 @@
-import Image from "next/image";
-import React from "react";
+import Image from "next/image"
 
 const About = () => {
   return (
-    <div id="about" className="w-full flex justify-center bg-[#4c9d2a]">
-      <div className=" py-10 text-white  w-[90%] align-center flex max-xl:hidden">
-        <div className=" mr-10 w-[30%]">
-          <h1 className="text-7xl uppercase mb-10">Nostros</h1>
-          <Image
-            className="w-full h-[700px] object-cover select-none overflow-hidden rounded-2xl"
-            src="/assets/grass-about.jpg"
-            alt="about-img"
-            width={1000}
-            height={1000}
-          />
+    <div id="about" className="w-full bg-[#f8f6f3]">
+      <div className="max-w-7xl mx-auto px-8 py-24">
+        {/* Section header */}
+        <div className="mb-20">
+          <h2 className="text-6xl md:text-7xl font-light text-black mb-4">
+            Somos <span className="font-semibold text-[#4c9d2a]">Green Garden</span>
+          </h2>
+          <div className="w-24 h-0.5 bg-[#4c9d2a]"></div>
         </div>
-        <div
-          className="border-t-[1px] border-slate-200 w-[40%] 
-        py-[5%] px-[5%]"
-        >
-          <h2 className="text-7xl uppercase">GREEN</h2>
-          <h2 className="text-7xl uppercase text-right text-[#00642b]">GARDEN</h2>
-          <p>
-            Empresa dedicada a la distribución, planeación, diseño y ejecución
-            de proyectos de jardinería y proyectos deportivos fundada en el año
-            2002, buscando transformar paisajes, creando vida en espacios
-            naturales, siempre con diseños creativos, innovadores y funcionales
-            para nuestros clientes.
-          </p>
-          <div className="w-full flex justify-center">
-            <Image
-              className="align-center mt-10 w-full h-[320px] object-cover select-none overflow-hidden rounded-2xl"
-              src="/assets/more-grass.jpg"
-              alt="hero-img"
-              width={400}
-              height={400}
-            />
-          </div>
-        </div>
-        <div className="w-[30%] relative text-white">
-          <h1 className="text-7xl uppercase text-right">somos</h1>
-          <a href="/contact">
-            <div
-              className="flex text-black absolute top-[40%] translate-y-[-50%] right-0 text-xl  bg-white p-3
-            hover:invert ease-in-out duration-200 rounded-2xl"
-            >
-              Contáctanos
+
+        {/* Content grid */}
+        <div className="grid md:grid-cols-2 gap-16 items-start">
+          {/* Left column - Text content */}
+          <div className="space-y-8">
+            <div>
+              <h3 className="text-sm uppercase tracking-widest text-black/60 mb-4">Nosotros</h3>
+              <p className="text-lg leading-relaxed text-black/80">
+                Empresa dedicada a la distribución, planeación, diseño y ejecución de proyectos de jardinería y
+                proyectos deportivos fundada en el año 2002, buscando transformar paisajes, creando vida en espacios
+                naturales, siempre con diseños creativos, innovadores y funcionales para nuestros clientes.
+              </p>
             </div>
-          </a>{" "}
-          <div className="w-full absolute bottom-0 left-0">
-            <p>
-              Somos una empresa dedicada a la distribución, planeación, diseño y
-              ejecución de proyectos de jardinería y proyectos deportivos con
-              pasto sintético.
-            </p>
+
+            {/* Image 1 */}
+            <div className="relative aspect-[4/3] overflow-hidden rounded-sm">
+              <Image
+                className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                src="/assets/about/1.jpg"
+                alt="Green Garden Project"
+                width={600}
+                height={450}
+              />
+            </div>
           </div>
-        </div>
-      </div>
-      <div className="hidden py-10 text-white  w-[90%] align-center max-xl:block mr">
-        <div className=" w-full">
-          <h1 className="text-5xl md:text-7xl uppercase mb-10">Nostros somos</h1>
-          <h2 className="text-5xl md:text-7xl uppercase">GREEN</h2>
-          <h2 className="text-5xl md:text-7xl uppercase mb-10 text-[#00642b] text-right">GARDEN</h2>
-          <div className="w-full h-[300px]">
-            <Image
-              className="w-full h-full object-cover select-none overflow-hidden rounded-2xl"
-              src="/assets/grass-about.jpg"
-              alt="about-img"
-              width={1000}
-              height={1000}
-            />
-          </div>
-        </div>
-        <div
-          className=" w-full 
-        py-[5%]"
-        >           
-          <p>
-            Empresa dedicada a la distribución, planeación, diseño y ejecución
-            de proyectos de jardinería y proyectos deportivos fundada en el año
-            2002, buscando transformar paisajes, creando vida en espacios
-            naturales, siempre con diseños creativos, innovadores y funcionales
-            para nuestros clientes.
-          </p>
-          <br />
-          <br />
-          <p>
-            Somos una empresa dedicada a la distribución, planeación, diseño y
-            ejecución de proyectos de jardinería y proyectos deportivos con
-            pasto sintético.
-          </p>
-          <div className="w-full flex justify-center py-10">
-            <div className="flex align-center  text-black  text-xl  bg-white p-3 rounded-2xl">
-              Contáctanos
+
+          {/* Right column - Image and mission */}
+          <div className="space-y-8">
+            {/* Image 2 */}
+            <div className="relative aspect-[4/3] overflow-hidden rounded-sm">
+              <Image
+                className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                src="/assets/about/2.jpg"
+                alt="Green Garden Installation"
+                width={600}
+                height={450}
+              />
+            </div>
+
+            <div>
+              <h3 className="text-sm uppercase tracking-widest text-black/60 mb-4">Nuestra Misión</h3>
+              <p className="text-lg leading-relaxed text-black/80 mb-8">
+                Somos una empresa dedicada a la distribución, planeación, diseño y ejecución de proyectos de jardinería
+                y proyectos deportivos con pasto sintético.
+              </p>
+
+              <a
+                href="#contact"
+                className="inline-block rounded-2xl bg-black text-white px-8 py-4 text-sm uppercase tracking-wider hover:bg-[#4c9d2a] transition-colors duration-300"
+              >
+                Contáctanos
+              </a>
             </div>
           </div>
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default About;
+export default About
