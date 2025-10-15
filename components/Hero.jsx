@@ -15,7 +15,7 @@ export default function Hero() {
           <br />
           <span className="font-normal">en un paisaje</span>
           <br />
-          <span className=" px-6 rounded-2xl font-medium bg-[#48b135]">lleno de vida.</span>
+          <span className=" px-2 rounded-2xl font-medium bg-[#48b135]">lleno de vida.</span>
         </h1>
 
         <div className="mt-6 h-2 rounded-2xl w-32 bg-[#48b135]"></div>

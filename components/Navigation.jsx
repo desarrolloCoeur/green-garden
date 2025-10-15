@@ -1,111 +1,145 @@
-"use client"
+"use client";
 
-import { Facebook, Instagram } from "lucide-react"
-import Image from "next/image"
+import { Phone, Menu, X } from "lucide-react";
+import Image from "next/image";
+import { useState, useEffect } from "react";
 
 export default function Navigation() {
-  const navLinks = [
-    { href: "#about", label: "Nosotros" },
-    { href: "#servicios", label: "Servicios" },    
-    { href: "#contacto", label: "Contacto" },
-  ]
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 10);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
-    <nav className=" top-0 z-50 w-full bg-white border-b border-gray-100 shadow-sm">
-      <div className="max-w-[1400px] mx-auto px-8 lg:px-12 py-3">
-        {/* Desktop: horizontal layout */}
-        <div className="hidden lg:flex justify-between items-center">
-          <a href="#" className="flex items-center transition-opacity hover:opacity-80">
-            <Image src="/assets/logo.png" alt="Green Garden" width={400} height={270} className="h-18 w-auto" />
+    <nav
+      className={`fixed top-0 z-50 w-full bg-white/95 border-b border-gray-100 transition-all duration-300 ${
+        isScrolled ? "backdrop-blur-md shadow-sm" : ""
+      }`}
+    >
+      <div className="max-w-7xl mx-auto px-6 lg:px-12">
+        <div className="flex items-center justify-between h-20">
+          <a href="#" className="transition-all duration-300 hover:scale-105">
+            <Image
+              src="/assets/logo.png"
+              alt="Green Garden"
+              width={180}
+              height={60}
+              className="h-12 w-auto"
+            />
           </a>
 
-          <div className="flex items-center gap-12 flex-1 justify-center">
-            {navLinks.map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
-                className="text-base font-medium text-gray-700 hover:text-[#4CAF50] transition-all duration-300 relative group"
-              >
-                {link.label}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#4CAF50] transition-all duration-300 group-hover:w-full"></span>
-              </a>
-            ))}
+          {/* Desktop Navigation */}
+          <div className="hidden md:flex items-center gap-8">
+            <a
+              href="#about"
+              className="relative text-gray-700 hover:text-[#4CAF50] transition-colors font-medium group"
+            >
+              Nosotros
+              <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-[#4CAF50] transition-all duration-300 group-hover:w-full"></span>
+            </a>
+
+            <a
+              href="#servicios"
+              className="relative text-gray-700 hover:text-[#4CAF50] transition-colors font-medium group"
+            >
+              Servicios
+              <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-[#4CAF50] transition-all duration-300 group-hover:w-full"></span>
+            </a>
+
+            <a
+              href="tel:6688155193"
+              className="flex items-center gap-2 text-gray-700 hover:text-[#4CAF50] transition-colors font-medium group"
+            >
+              <Phone
+                size={16}
+                className="transition-transform duration-300 group-hover:scale-110 group-hover:rotate-12"
+              />
+              (668) 815 5193
+            </a>
+
+            <a
+              href="#contacto"
+              className="px-6 py-2.5 bg-[#4CAF50] text-white rounded-full font-medium hover:bg-[#45a049] transition-all duration-300 hover:scale-105 hover:shadow-lg"
+            >
+              Contacto
+            </a>
           </div>
 
-          <div className="flex items-center gap-5">
-            <a
-              href="https://facebook.com/greengardenmex"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-gray-700 hover:text-[#4CAF50] transition-all duration-300 hover:scale-110"
-              aria-label="Facebook"
+          {/* Mobile menu button */}
+          <button
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            className="md:hidden p-2 text-gray-700 hover:text-[#4CAF50] transition-all duration-300 hover:scale-110"
+            aria-label="Toggle menu"
+          >
+            <div
+              className={`transition-transform duration-300 ${
+                mobileMenuOpen ? "rotate-90" : ""
+              }`}
             >
-              <Facebook size={20} strokeWidth={1.5} />
-            </a>
-            <a
-              href="https://instagram.com/greengardenmex"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-gray-700 hover:text-[#4CAF50] transition-all duration-300 hover:scale-110"
-              aria-label="Instagram"
-            >
-              <Instagram size={20} strokeWidth={1.5} />
-            </a>
-          </div>
+              {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            </div>
+          </button>
         </div>
 
-        {/* Mobile: vertical layout on left */}
-        <div className="lg:hidden">
-          {/* Logo at top */}
-          <div className="mb-8">
-            <a href="#" className="inline-block transition-opacity hover:opacity-80">
-              <Image src="/assets/logo.png" alt="Green Garden" width={180} height={60} className="h-14 w-auto" />
+        {/* Mobile menu dropdown */}
+        <div
+          className={`md:hidden border-t border-gray-100 overflow-hidden transition-all duration-300 ${
+            mobileMenuOpen
+              ? "max-h-96 opacity-100 py-4"
+              : "max-h-0 opacity-0 py-0"
+          }`}
+        >
+          <div className="space-y-2">
+            <a
+              href="#servicios"
+              onClick={() => setMobileMenuOpen(false)}
+              className="block px-4 py-2 text-gray-700 hover:text-[#4CAF50] hover:bg-gray-50 transition-all duration-200 font-medium rounded-sm hover:translate-x-1"
+              style={{ animationDelay: "50ms" }}
+            >
+              Servicios
             </a>
-          </div>
 
-          {/* Navigation links and social icons in two columns */}
-          <div className="flex justify-between items-start">
-            {/* Left: Navigation links */}
-            <div className="flex flex-col gap-6">
-              {navLinks.map((link, index) => (
-                <a
-                  key={link.href}
-                  href={link.href}
-                  className="text-base font-medium text-gray-800 hover:text-[#4CAF50] transition-all duration-300 relative group"
-                  style={{ animationDelay: `${index * 50}ms` }}
-                >
-                  <span className="relative">
-                    {link.label}
-                    <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#4CAF50] transition-all duration-300 group-hover:w-full"></span>
-                  </span>
-                </a>
-              ))}
-            </div>
+            <a
+              href="#about"
+              onClick={() => setMobileMenuOpen(false)}
+              className="block px-4 py-2 text-gray-700 hover:text-[#4CAF50] hover:bg-gray-50 transition-all duration-200 font-medium rounded-sm hover:translate-x-1"
+              style={{ animationDelay: "100ms" }}
+            >
+              Nosotros
+            </a>
 
-            {/* Right: Social icons */}
-            <div className="flex flex-col gap-6 pt-1">
+            <a
+              href="tel:6688155193"
+              onClick={() => setMobileMenuOpen(false)}
+              className="flex items-center gap-2 px-4 py-2 text-gray-700 hover:text-[#4CAF50] hover:bg-gray-50 transition-all duration-200 font-medium rounded-sm hover:translate-x-1 group"
+              style={{ animationDelay: "150ms" }}
+            >
+              <Phone
+                size={16}
+                className="transition-transform duration-300 group-hover:scale-110"
+              />
+              (668) 815 5193
+            </a>
+
+            <div className="px-4 pt-2">
               <a
-                href="https://facebook.com/greengardenmex"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-700 hover:text-[#4CAF50] transition-all duration-300 hover:scale-110"
-                aria-label="Facebook"
+                href="#contacto"
+                onClick={() => setMobileMenuOpen(false)}
+                className="block text-center px-6 py-2.5 bg-[#4CAF50] text-white rounded-full font-medium hover:bg-[#45a049] transition-all duration-300 hover:scale-105 hover:shadow-lg"
+                style={{ animationDelay: "200ms" }}
               >
-                <Facebook size={22} strokeWidth={1.5} />
-              </a>
-              <a
-                href="https://instagram.com/greengardenmex"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-700 hover:text-[#4CAF50] transition-all duration-300 hover:scale-110"
-                aria-label="Instagram"
-              >
-                <Instagram size={22} strokeWidth={1.5} />
+                Contacto
               </a>
             </div>
           </div>
         </div>
       </div>
     </nav>
-  )
+  );
 }
