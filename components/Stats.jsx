@@ -1,9 +1,9 @@
 export default function Stats() {
   const stats = [
-    { number: "20+", label: "Años de Experiencia" },
-    { number: "500+", label: "Proyectos Completados" },
-    { number: "100+", label: "Clientes Satisfechos" },
-    { number: "50+", label: "Ciudades Atendidas" },
+    { number: "10", label: "Años de Experiencia" },
+    { number: "800+", label: "Proyectos Completados" },
+    { number: "800+", label: "Clientes Satisfechos" },
+    { number: "20+", label: "Ciudades Atendidas" },
   ]
 
   return (

@@ -1,24 +1,24 @@
-"use client"
+"use client";
 
-import { useCallback } from "react"
-import { ChevronLeft, ChevronRight } from "lucide-react"
-import Image from "next/image"
-import useEmblaCarousel from "embla-carousel-react"
+import { useCallback } from "react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
+import Image from "next/image";
+import useEmblaCarousel from "embla-carousel-react";
 
 export default function Gallery() {
   const [emblaRef, emblaApi] = useEmblaCarousel({
     align: "start",
     containScroll: "trimSnaps",
     dragFree: false,
-  })
+  });
 
   const scrollPrev = useCallback(() => {
-    if (emblaApi) emblaApi.scrollPrev()
-  }, [emblaApi])
+    if (emblaApi) emblaApi.scrollPrev();
+  }, [emblaApi]);
 
   const scrollNext = useCallback(() => {
-    if (emblaApi) emblaApi.scrollNext()
-  }, [emblaApi])
+    if (emblaApi) emblaApi.scrollNext();
+  }, [emblaApi]);
 
   const images = [
     "/assets/gallery/1.jpg",
@@ -30,16 +30,13 @@ export default function Gallery() {
     "/assets/gallery/7.jpg",
     "/assets/gallery/8.jpg",
     "/assets/gallery/9.jpg",
-    "/assets/gallery/10.jpg",
     "/assets/gallery/11.jpg",
-    "/assets/gallery/12.jpg",
     "/assets/gallery/13.jpg",
     "/assets/gallery/14.jpg",
     "/assets/gallery/15.jpg",
     "/assets/gallery/16.jpg",
     "/assets/gallery/17.jpg",
-    "/assets/gallery/18.jpg",
-  ]
+  ];
 
   return (
     <section className="relative md:py-1 lg:py-2 bg-[#f8f6f3] overflow-hidden">
@@ -64,7 +61,10 @@ export default function Gallery() {
           <div className="overflow-visible" ref={emblaRef}>
             <div className="flex gap-3 md:gap-4 lg:gap-6">
               {images.map((image, index) => (
-                <div key={index} className="flex-shrink-0 w-full md:w-1/2 lg:w-[400px]">
+                <div
+                  key={index}
+                  className="flex-shrink-0 w-full md:w-1/2 lg:w-[400px]"
+                >
                   <div className="relative w-full h-[500px]">
                     <Image
                       src={image || "/placeholder.svg"}
@@ -81,5 +81,5 @@ export default function Gallery() {
         </div>
       </div>
     </section>
-  )
+  );
 }

@@ -13,9 +13,7 @@ export default function Hero() {
         <h1 className="text-4xl lg:text-6xl font-light text-white leading-tight tracking-wide text-left mt-10">
           Convertimos tu entorno
           <br />
-          <span className="font-normal">en un paisaje </span>
-          <br className="block md:hidden"/>
-          <span className=" px-2 rounded-2xl font-medium bg-[#48b135]">lleno de vida.</span>
+          en un paisaje <br className="display md:hidden"/><span className=" px-2 rounded-2xl font-medium bg-[#48b135]">lleno de vida.</span>
         </h1>
 
         <div className="mt-6 h-2 rounded-2xl w-32 bg-[#48b135]"></div>
