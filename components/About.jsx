@@ -6,8 +6,8 @@ const About = () => {
       <div className="max-w-7xl mx-auto px-8 py-24">
         {/* Section header */}
         <div className="mb-20">
-          <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">
-            Somos <span className=" text-[#4c9d2a]">Green Garden</span>
+          <h2 className="text-4xl md:text-5xl text-black mb-4">
+            Somos <br className="md:hidden"/><span className="font-bold text-[#4c9d2a]">Green Garden</span>
           </h2>
           <div className="w-24 h-0.5 bg-[#4c9d2a]"></div>
         </div>

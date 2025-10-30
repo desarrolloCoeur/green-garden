@@ -30,8 +30,8 @@ export default function Places() {
           <div className="space-y-8">
             {/* Title */}
             <div>
-              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
-                Nuestra <span className=" text-[#7CB342]">Presencia</span>
+              <h2 className="text-4xl md:text-5xl text-gray-900 leading-tight">
+                Nuestra <span className="font-bold text-[#7CB342]">Presencia</span>
               </h2>
               <div className="w-16 h-1 bg-[#7CB342] mt-4" />
             </div>

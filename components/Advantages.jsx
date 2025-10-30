@@ -47,8 +47,8 @@ export default function Advantages() {
           <div className="space-y-8">
             {/* Title */}
             <div>
-              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
-                Ventajas del Pasto <span className="text-[#7CB342]">Sintético</span>
+              <h2 className="text-4xl md:text-5xl  text-gray-900 leading-tight">
+                Ventajas del Pasto <span className="font-bold text-[#7CB342]">Sintético</span>
               </h2>
               <div className="w-16 h-1 bg-[#7CB342] mt-4" />
             </div>
