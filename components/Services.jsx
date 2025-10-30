@@ -43,6 +43,7 @@ export default function Services() {
       images: [
         "/assets/services/deportive.jpg",
         "/assets/gallery/4.jpg",        
+        "/assets/gallery/cancha-1.jpg",   
       ],
     },
     {

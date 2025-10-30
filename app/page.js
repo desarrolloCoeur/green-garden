@@ -10,6 +10,7 @@ import Distributor from "@/components/Distributor";
 
 import Advantages from "@/components/Advantages";
 import WhastappButton from "@/components/WhatsappButton";
+import Places from "@/components/Places";
 
 export default function Page() {
   return (
@@ -18,8 +19,9 @@ export default function Page() {
       <Hero />
       <About />
       <Services />
-      <Advantages />
+      <Advantages />      
       <Stats />
+      <Places/>
       <Testimonial />
       <Distributor />
       <Footer />
