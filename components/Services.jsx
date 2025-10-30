@@ -172,8 +172,8 @@ export default function Services() {
   return (
     <div id="servicios" className="w-full bg-white py-16 md:py-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
-        <h2 className="text-4xl md:text-6xl font-light text-black mb-4">
-          Nuestros <span className=" text-[#4c9d2a] font-black">Servicios</span>
+        <h2 className="text-4xl md:text-6xl font-bold text-black mb-4">
+          Nuestros <span className=" text-[#4c9d2a]">Servicios</span>
         </h2>
         <div className="w-24 h-0.5 bg-[#4c9d2a]"></div>
       </div>
