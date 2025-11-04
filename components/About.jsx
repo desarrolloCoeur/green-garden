@@ -1,4 +1,4 @@
-import Image from "next/image"
+import Image from "next/image";
 
 const About = () => {
   return (
@@ -6,8 +6,9 @@ const About = () => {
       <div className="max-w-7xl mx-auto px-8 py-24">
         {/* Section header */}
         <div className="mb-20">
-          <h2 className="text-4xl md:text-5xl text-black mb-4">
-            Somos <br className="md:hidden"/><span className="font-bold text-[#4c9d2a]">Green Garden</span>
+          <h2 className="text-4xl md:text-5xl font-black text-black mb-4">
+            Somos <br className="md:hidden" />
+            <span className="font-bold text-[#4c9d2a]">Green Garden</span>
           </h2>
           <div className="w-24 h-0.5 bg-[#4c9d2a]"></div>
         </div>
@@ -17,11 +18,15 @@ const About = () => {
           {/* Left column - Text content */}
           <div className="space-y-8">
             <div>
-              <h3 className="text-sm uppercase tracking-widest text-black/60 mb-4">Nosotros</h3>
+              <h3 className="text-md uppercase tracking-widest text-[#4c9d2a] font-black mb-4">
+                Nosotros
+              </h3>
               <p className="text-lg leading-relaxed text-black/80">
-                Empresa dedicada a la distribución, planeación, diseño y ejecución de proyectos de jardinería y
-                proyectos deportivos fundada en el año 2002, buscando transformar paisajes, creando vida en espacios
-                naturales, siempre con diseños creativos, innovadores y funcionales para nuestros clientes.
+                Empresa dedicada a la distribución, planeación, diseño y
+                ejecución de proyectos de jardinería y proyectos deportivos
+                fundada en el año 2015, buscando transformar paisajes, creando
+                vida en espacios naturales, siempre con diseños creativos,
+                innovadores y funcionales para nuestros clientes.
               </p>
             </div>
 
@@ -51,15 +56,17 @@ const About = () => {
             </div>
 
             <div>
-              <h3 className="text-sm uppercase tracking-widest text-black/60 mb-4">Nuestra Misión</h3>
+              <h3 className="text-md uppercase tracking-widest text-[#4c9d2a] font-black mb-4">
+                Nuestra Misión
+              </h3>
               <p className="text-lg leading-relaxed text-black/80 mb-8">
-                Somos una empresa dedicada a la distribución, planeación, diseño y ejecución de proyectos de jardinería
-                y proyectos deportivos con pasto sintético.
+                Crear espacios verdes con valor, promover la cultura de la
+                conservación de las áreas verdes y del uso inteligente del agua.
               </p>
 
               <a
                 href="#contact"
-                className="inline-block rounded-2xl bg-black text-white px-8 py-4 text-sm uppercase tracking-wider hover:bg-[#4c9d2a] transition-colors duration-300"
+                className="inline-block rounded-2xl bg-[#4c9d2a] text-white px-8 py-4 text-sm uppercase tracking-wider hover:scale-110 duration-300"
               >
                 Contáctanos
               </a>
@@ -68,7 +75,7 @@ const About = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default About
+export default About;

@@ -12,7 +12,7 @@ export default function Stats() {
     <section className="py-32 lg:py-40 bg-white">
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         <div className="mb-20 text-center">
-          <p className="text-xs uppercase tracking-[0.2em] mb-6 font-medium text-[#4c9d2a]">Nuestro Impacto</p>
+          <p className="text-xs uppercase tracking-[0.2em] mb-6 font-black text-[#4c9d2a]">Nuestro Impacto</p>
           <h2 className="text-5xl lg:text-6xl font-bold max-w-4xl mx-auto leading-tight text-[#4c9d2a]">
             Green Garden Trabaja en Toda la Región
           </h2>

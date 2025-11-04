@@ -1,26 +1,26 @@
-"use client"
+"use client";
 
-import Image from "next/image"
-import { MapPin } from "lucide-react"
+import Image from "next/image";
+import { MapPin } from "lucide-react";
 
 export default function Places() {
   const locations = [
-    "HERMOSILLO",
-    "OBREGÓN",
-    "NAVOJOA",
-    "MOCHIS",
-    "GUASAVE",
-    "CULIACÁN",
-    "MAZATLÁN",
-    "GUADALAJARA",
-    "CIUDAD GUZMÁN",
-    "SANTA ROSALÍA",
-    "MULEGÉ",
-    "LORETO",
-    "LA PAZ",
-    "CABO SAN LUCAS",
-    "SAN JOSÉ DEL CABO",
-  ]
+    "Hermosillo, Son.",
+    "Cd. Obregón, Son.",
+    "Navojoa, Son.",
+    "Los Mochis, Sin.",
+    "Guasave, Sin.",
+    "Culiacán, Sin.",
+    "Mazatlán, Sin.",
+    "Santa Rosalía, B.C.S.",
+    "Mulegé, B.C.S.",
+    "Loreto, B.C.S.",
+    "La Paz, B.C.S.",
+    "Cabo San Lucas, B.C.S.",
+    "San José del Cabo, B.C.S.",
+    "Guadalajara, Jal.",
+    "Cd. Guzmán, Jal.",
+  ];
 
   return (
     <section className="py-16 md:py-24 bg-[#f8f6f3]">
@@ -30,16 +30,18 @@ export default function Places() {
           <div className="space-y-8">
             {/* Title */}
             <div>
-              <h2 className="text-4xl md:text-5xl text-gray-900 leading-tight">
-                Nuestra <span className="font-bold text-[#7CB342]">Presencia</span>
+              <h2 className="text-4xl md:text-5xl font-black text-gray-900 leading-tight">
+                Nuestra{" "}
+                <span className="font-bold text-[#7CB342]">Presencia</span>
               </h2>
               <div className="w-16 h-1 bg-[#7CB342] mt-4" />
             </div>
 
             {/* Description */}
             <p className="text-gray-700 text-lg leading-relaxed">
-              Contamos con presencia en las principales ciudades del noroeste y occidente de México, brindando servicios
-              de calidad en pasto sintético para satisfacer las necesidades de nuestros clientes.
+              Contamos con presencia en las principales ciudades del noroeste y
+              occidente de México, brindando servicios de calidad en pasto
+              sintético para satisfacer las necesidades de nuestros clientes.
             </p>
 
             {/* Locations Grid */}
@@ -65,10 +67,10 @@ export default function Places() {
               alt="Mapa de cobertura en México"
               fill
               className="object-contain"
-            />   
+            />
           </div>
         </div>
       </div>
     </section>
-  )
+  );
 }

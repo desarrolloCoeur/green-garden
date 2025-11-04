@@ -11,19 +11,21 @@ import Distributor from "@/components/Distributor";
 import Advantages from "@/components/Advantages";
 import WhastappButton from "@/components/WhatsappButton";
 import Places from "@/components/Places";
+import LogoCarousel from "@/components/Logo-Carousel";
 
 export default function Page() {
   return (
     <main className="min-h-screen">
       <Navigation />
-      <Hero />
-      <About />
+      <Hero />      
+      <About />      
+      <LogoCarousel/>
       <Services />
       <Advantages />      
       <Stats />
-      <Places/>
+      <Places/>    
       <Testimonial />
-      <Distributor />
+      <Distributor />      
       <Footer />
       <WhastappButton />
     </main>

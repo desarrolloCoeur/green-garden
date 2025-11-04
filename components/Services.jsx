@@ -26,9 +26,9 @@ export default function Services() {
       ],
       images: [
         "/assets/services/recreative.jpg",
-        "/assets/gallery/1.jpg",
-        "/assets/gallery/2.jpg",
-        "/assets/gallery/6.jpg",
+        "/assets/gallery/rec-2.jpg",
+        "/assets/gallery/rec-3.jpg",
+        "/assets/gallery/rec-4.jpg",
       ],
     },
     {
@@ -41,9 +41,10 @@ export default function Services() {
         "Mantenimiento mínimo requerido",
       ],
       images: [
-        "/assets/services/deportive.jpg",
-        "/assets/gallery/4.jpg",        
-        "/assets/gallery/cancha-1.jpg",   
+        "/assets/gallery/cancha-1.jpg",        
+        "/assets/gallery/cancha-2.jpg",   
+        "/assets/gallery/cancha-3.jpg",   
+        "/assets/gallery/cancha-4.jpg",   
       ],
     },
     {
@@ -57,10 +58,10 @@ export default function Services() {
         "15 años de garantía",
       ],
       images: [
-        "/assets/services/resident.jpg",
-        "/assets/gallery/11.jpg",
-        "/assets/gallery/13.jpg",
-        "/assets/gallery/14.jpg",
+        "/assets/gallery/res-1.jpg",
+        "/assets/gallery/res-2.jpg",
+        "/assets/gallery/res-3.jpg",
+        "/assets/gallery/res-4.jpg",
       ],
     },
   ];
@@ -172,8 +173,8 @@ export default function Services() {
   return (
     <div id="servicios" className="w-full bg-white py-16 md:py-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
-        <h2 className="text-4xl md:text-5xl text-black mb-4">
-          Nuestros <span className="font-bold text-[#4c9d2a]">Servicios</span>
+        <h2 className="text-4xl md:text-5xl text-black mb-4 font-black">
+          Nuestros <span className=" text-[#4c9d2a]">Servicios</span>
         </h2>
         <div className="w-24 h-0.5 bg-[#4c9d2a]"></div>
       </div>
@@ -190,7 +191,7 @@ export default function Services() {
             >
               {/* Green Info Card */}
               <div className="w-2/5 bg-[#4c9d2a] text-white p-10 rounded-sm flex flex-col justify-center">
-                <h3 className="text-4xl font-light text-white uppercase tracking-wider mb-4">
+                <h3 className="text-4xl font-black text-white uppercase tracking-wider mb-4">
                   {service.title}
                 </h3>
                 <p className="text-base leading-relaxed mb-8">
